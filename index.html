@@ -42,7 +42,7 @@
 
         main.content {
             background: white;
-            width: 740px;
+            width: 600px;
             min-height: 100vh;
             margin: 2em 0;
             padding: 1em 2em;
@@ -70,6 +70,16 @@
         div h3 {
             display: inline-block;
             margin-bottom: 0;
+        }
+
+        @media only screen and (max-width: 700px) {
+            body {
+                padding: 0 2em;
+            }
+
+            main.content {
+                width: 100%;
+            }
         }
     </style>
 
