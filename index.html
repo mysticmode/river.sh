@@ -23,13 +23,15 @@
         }
 
         body {
+            display: flex;
+            justify-content: center;
             font-family: "Departure Mono", monospace;
             font-size: 14px;
             color: #222;
             line-height: 1.15em;
-            width: 640px;
-            margin: 0 auto;
-            background: #222;
+            background-image: radial-gradient(circle at 1px 1px, #ccc 2px, transparent 0);
+            background-size: 40px 40px;
+            background-attachment: fixed;
         }
 
         a {
@@ -39,10 +41,13 @@
         }
 
         main.content {
-            background: #c0c0c0;
+            background: white;
+            width: 740px;
             min-height: 100vh;
             margin: 2em 0;
-            padding: 1em;
+            padding: 1em 2em;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 15%);
         }
 
         .header a {
@@ -61,6 +66,11 @@
         div p:last-child {
             margin-bottom: 2em;
         }
+
+        div h3 {
+            display: inline-block;
+            margin-bottom: 0;
+        }
     </style>
 
 </head>
@@ -71,21 +81,37 @@
         <header class="header">
             <div># MISSION REPORT - <a href="/">RIVERSIDE HOUSE</a></div>
             <div>SUBJECT: CLARITY, CONSISTENCY AND EXCELLENCE.</div>
-            <div>EARTH LOCATION: KARUR, INDIA</div>
-            <div>MISSION DIRECTOR: NIRMAL KUMAR R</div>
+            <div>EARTH GEO: KARUR, INDIA [IST]</div>
+            <div>MISSION DIRECTOR: <a href="https://nirm.al" target="_blank">NIRMAL KUMAR R</a></div>
             <div>---</div>
         </header>
 
         <div>
             ## OVERVIEW
             <p>
-                Welcome to Riverside House -- a software development boutique from <a href="https://nirm.al">Nirmal
-                    Kumar R</a>.
+                Welcome to Riverside House -- a software development boutique delivering with the mission of clarity,
+                consistency and excellence in it's work.
             </p>
         </div>
 
         <div>
             ### OBSERVATIONS
+            <div>
+                <span>-&gt;</span>
+                <h3>EMPTY FM</h3>
+                <p>
+                    There is an obvious chance that we could not get radio signals on our home that puts us in a turmoil
+                    where we cannot be able to listen to our favorite FM radio stations. What if there is a browser app
+                    where we
+                    can
+                    listen to our radios on the comfort of our mobile or laptop computers with an internet connection.
+                </p>
+                <p>
+                    This is where EMPTY FM comes into play. You can listen to FM stations from all over the
+                    world.<br><br>
+                    LOCATION: <a href="https://emptyfm.netlify.app">https://emptyfm.netlify.app</a>
+                </p>
+            </div>
         </div>
     </main>
 
