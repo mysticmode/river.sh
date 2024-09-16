@@ -9,12 +9,12 @@
     <style>
         @font-face {
             font-family: "Inter";
-            src: url("/font/InterDisplay-Medium.woff2") format("woff2");
+            src: url("/static/font/InterDisplay-Medium.woff2") format("woff2");
         }
 
         @font-face {
             font-family: "Inter Bold";
-            src: url("/font/InterDisplay-Bold.woff2") format("woff2");
+            src: url("/static/font/InterDisplay-Bold.woff2") format("woff2");
         }
         
         * {
@@ -74,21 +74,42 @@
         }
 
         .section {
+            display: flex;
+            align-items: center;
+            margin: 4em 0;
+        }
+
+        .section-content {
             width: 50%;
-            margin: 2em 0;
         }
 
         .section:nth-of-type(even) {
-            float: right;
+            display: flex;
+            flex-direction: row-reverse;
         }
 
-        .section:nth-of-type(odd) {
-            clear: both;
+        .section img {
+            margin: 0 auto;
         }
 
+        .projects .title,
         .section .section-content .title {
             font-family: 'Inter Bold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             font-size: 30px;
+        }
+
+        .projects .title {
+            text-align: center;
+        }
+
+        .projects {
+            margin: 4em 0;
+        }
+
+        .projects nav {
+            padding: 2em 0;
+            display: flex;
+            justify-content: space-evenly;
         }
 
         .footer {
@@ -125,6 +146,22 @@
 
         </header>
 
+        <div class="projects">
+            <hr>
+            <div class="title">Our work</div>
+            <nav>
+                <div>
+                    <a href="https://pasteful.org/" target="_blank">Pasteful</a>
+                    <p>A tasteful open-source code snippet store and share platform.</p>
+                </div>
+                <div>
+                    <a href="https://emptyfm.river.sh" target="_blank">EmptyFM</a>
+                    <p>Listen to your favorite FM Radio from your browser.</p>
+                </div>
+            </nav>
+            <hr>
+        </div>
+
         <section class="section">
             <div class="section-content">
                 <div class="title">Expertise</div>
@@ -134,6 +171,7 @@
                     every detail in whatever we do.
                 </p>
             </div>
+            <img src="/static/img/expertise.svg" />
         </section>
 
         <section class="section">
@@ -145,6 +183,7 @@
                     and believe that the effort that we put in is worth a satisfaction of our daily life.
                 </p>
             </div>
+            <img src="/static/img/dna.svg" />
         </section>
 
         <section class="section">
@@ -158,6 +197,7 @@
                     <a href="mailto:tildezero@gmail.com">tildezero@gmail.com</a>
                 </p>
             </div>
+            <img src="/static/img/contact.svg" />
         </section>
 
         <footer class="footer">
