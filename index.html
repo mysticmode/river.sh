@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riverside House Company</title>
+    <title>Riverpath company</title>
 
     <style>
         @font-face {
-            font-family: "Departure Mono";
-            src: url("/font/DepartureMono-Regular.woff2") format("woff2");
+            font-family: "Inter";
+            src: url("/font/InterDisplay-Medium.woff2") format("woff2");
         }
 
+        @font-face {
+            font-family: "Inter Bold";
+            src: url("/font/InterDisplay-Bold.woff2") format("woff2");
+        }
+        
         * {
             box-sizing: border-box;
         }
@@ -23,89 +28,75 @@
         }
 
         body {
-            display: flex;
-            justify-content: center;
-            font-family: "Departure Mono", monospace;
-            font-size: 14px;
-            color: #222;
-            line-height: 1.15em;
-            background-image: radial-gradient(circle at 1px 1px, #ccc 2px, #444444 0);
-            background-size: 40px 40px;
-            background-attachment: fixed;
+            font-family: 'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 22px;
+            color: #4b3f62;
+            background-color: #e3e8ed;
         }
 
         a {
-            color: #222;
+            color: #15C;
             text-decoration: none;
-            border-bottom: 1px dashed #000;
         }
 
         main.content {
-            position: relative;
-            background: white;
-            width: 600px;
-            margin: 2em;
-            padding: 1em 2em;
+            max-width: 1260px;
+            margin: 0 auto;
         }
 
-        .header a {
-            color: #222;
-            text-decoration: none;
+        .header {
+            font-size: 48px;
+            margin: 20px auto 40px;
+            width: 100%;
         }
 
-        .header div:first-child,
-        .footer div:first-child,
-        .footer div:nth-child(2) {
-            margin-bottom: 1em;
+        .header .logo a {
+            font-size: 32px;
+            color: #4b3f62;
         }
 
-        .header div:last-child {
-            margin: 1em 0;
+        .header .logo {
+            margin-bottom: 0.4em;
         }
 
-        div p:last-child {
-            margin-bottom: 2em;
+        .header .tagline {
+            font-family: 'Inter Bold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 76px;
+            color: transparent;
+            text-overflow: ellipsis;
+            background-image: linear-gradient(326deg, #c75050 24.53%, #8582d7 75.37%);
+            background-clip: text;
+            letter-spacing: 0.01em;
         }
 
-        div h3 {
-            display: inline-block;
-            margin-bottom: 0;
+        .header .description {
+            font-size: 48px;
         }
 
-        .left-margin,
-        .right-margin {
-            position: absolute;
-            top: 0;
-            width: 28px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-left: -56px;
-            border-left: 5px solid black;
-            border-right: 5px solid black;
+        .section {
+            width: 50%;
+            margin: 2em 0;
         }
 
-        .right-margin {
-            right: -28px;
+        .section:nth-of-type(even) {
+            float: right;
         }
 
-        .pagedot {
-            width: 24px;
-            height: 100%;
-            background-image: url('/pagedot.svg');
-            background-repeat: repeat-y;
-            background-position: center;
-            margin-top: 0;
-            margin-left: 0;
-            background-size: 24px 24px;
+        .section:nth-of-type(odd) {
+            clear: both;
         }
 
-        @media only screen and (max-width: 800px) {
-            main.content {
-                width: 80%;
-            }
+        .section .section-content .title {
+            font-family: 'Inter Bold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 30px;
+        }
+
+        .footer {
+            margin: 2em 0 3em;
+            font-size: 18px;
+            border-top: 1px solid #4b3f62;
+            padding-top: 1em;
+            clear: both;
         }
     </style>
 
@@ -116,59 +107,61 @@
     <a rel="me" href="https://mastodon.social/@tildezero" style="display:none;">Mastodon</a>
 
     <main class="content">
-        <div class="left-margin">
-            <div class="pagedot"></div>
-        </div>
-
-        <div class="right-margin">
-            <div class="pagedot"></div>
-        </div>
 
         <header class="header">
-            <div># MISSION REPORT - <a href="/">RIVERSIDE HOUSE</a></div>
-            <div>SUBJECT: CLARITY, CONSISTENCY AND EXCELLENCE.</div>
-            <div>EARTH GEO: KARUR, INDIA [IST]</div>
-            <div>MISSION DIRECTOR: <a href="https://nirm.al" target="_blank">NIRMAL KUMAR R</a></div>
-            <div>---</div>
+            
+            <div class="logo">
+                <a href="/">Riverpath</a>
+            </div>
+            
+            <div class="tagline">
+                Clarity. Consistency. Excellence.
+            </div>
+
+            <div class="description">
+                A web application development boutique, delivering with the mission of Clarity, Consistency and
+                Excellence in it's work.
+            </div>
+
         </header>
 
-        <div>
-            ## OVERVIEW
-            <p>
-                Welcome to Riverside House -- a software development boutique delivering with the mission of clarity,
-                consistency and excellence in it's work.
-            </p>
-        </div>
-
-        <div>
-            ### OBSERVATIONS
-            <div>
-                <span>-&gt;</span>
-                <h3>EMPTY FM</h3>
-                <p>
-                    There is an obvious chance that we might not get radio signals on our home that puts us in a turmoil
-                    where we cannot be able to listen to our favorite FM radio stations. What if there is a browser app
-                    where we can listen to our radios on the comfort of our mobile or laptop computers with an internet
-                    connection.
-                </p>
-                <p>
-                    This is where EMPTY FM comes into play. You can listen to FM stations from all over the
-                    world.<br><br>
-                    HOST: <a href="https://emptyfm.river.sh">https://emptyfm.river.sh</a><br>
-                    CODE: <a
-                        href="https://github.com/mysticmode/emptyfm-web">https://github.com/mysticmode/emptyfm-web</a><br>
-                    COPY: <a href="https://github.com/mysticmode/emptyfm-web/blob/master/COPYING">ISC License</a>
+        <section class="section">
+            <div class="section-content">
+                <div class="title">Expertise</div>
+                <p class="description">
+                    With over 11 years of industry experience in software development and management—Riverpath can deliver. 
+                    We provide solutions for building versatile web applications and our core is understanding the nuances of 
+                    every detail in whatever we do.
                 </p>
             </div>
-        </div>
+        </section>
+
+        <section class="section">
+            <div class="section-content">
+                <div class="title">Our DNA</div>
+                <p class="description">
+                    Our source of truth is that a software must be open by design and has a transparent team in making decisions. 
+                    This is what we do with our existing products. We nurture each and every step of the process to a great care 
+                    and believe that the effort that we put in is worth a satisfaction of our daily life.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-content">
+                <div class="title">Get in touch</div>
+                <p class="description">
+                    Our team members are located in India and Denmark. If you have any queries, do not hesitate and feel free 
+                    to get in touch.
+                </p>
+                <p>
+                    <a href="mailto:tildezero@gmail.com">tildezero@gmail.com</a>
+                </p>
+            </div>
+        </section>
 
         <footer class="footer">
-            <div>---</div>
-            <div># UNDER THE RADAR</div>
-            <div>© Nirmal Kumar R &lt;tildezero@gmail.com&gt;</div>
-            <div>All original text on this website, is licensed under a <a
-                    href="http://creativecommons.org/licenses/by/4.0/" target="_blank">Creative
-                    Commons Attribution 4.0 International License</a>.</div>
+            Copyright © 2024 Nirmal Kumar R.
         </footer>
 
     </main>
