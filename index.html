@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riverpath company</title>
+    <link rel="icon" type="image/png" href="/static/img/riverprograms.png" />
+    <title>Riverprograms company</title>
 
     <style>
         @font-face {
@@ -40,7 +41,7 @@
         }
 
         main.content {
-            max-width: 1260px;
+            max-width: 1154px;
             margin: 0 auto;
         }
 
@@ -48,6 +49,12 @@
             font-size: 48px;
             margin: 20px auto 40px;
             width: 100%;
+        }
+
+        .header .logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .header .logo a {
@@ -109,7 +116,27 @@
         .projects nav {
             padding: 2em 0;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
+        }
+
+        .projects nav a {
+            position: relative;
+            text-decoration: underline;
+        }
+
+        .projects nav a::after {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            content: "";
+            background-image: url("/static/img/external-link.svg");
+            background-size: cover;
+            margin-top: 5px;
+            margin-left: 7px;
+        }
+
+        .projects nav div {
+            width: 50%;
         }
 
         .footer {
@@ -132,7 +159,10 @@
         <header class="header">
             
             <div class="logo">
-                <a href="/">Riverpath</a>
+                <a href="/">Riverprograms</a>
+                <a href="https://github.com/riverprograms">
+                    <img src="/static/img/github-mark.svg" height="32px"/>
+                </a>
             </div>
             
             <div class="tagline">
@@ -151,12 +181,28 @@
             <div class="title">Our work</div>
             <nav>
                 <div>
-                    <a href="https://pasteful.org/" target="_blank">Pasteful</a>
-                    <p>A tasteful open-source code snippet store and share platform.</p>
+                    <a href="https://emptyfm.river.sh" target="_blank">EmptyFM</a>
+                    <p>
+                        There is an obvious chance that we might not get radio signals on our home that puts us in a turmoil
+                        where we cannot be able to listen to our favorite FM radio stations. What if there is a browser app
+                        where we can listen to our radios on the comfort of our mobile or laptop computers with an internet
+                        connection.
+                    </p>
+                    <p>
+                        This is where EmptyFM comes into play. You can listen to FM stations from all over the world.
+                    </p>
                 </div>
                 <div>
-                    <a href="https://emptyfm.river.sh" target="_blank">EmptyFM</a>
-                    <p>Listen to your favorite FM Radio from your browser.</p>
+                    <a href="https://pasteful.org/" target="_blank">Pasteful</a>
+                    <p>
+                        Pasteful is a tastefully looking code-snippets storing and sharing platform. If you want a single-page 
+                        code snippets creation or something that you want to write as a single-page documentation to share it 
+                        with others, pasteful will be suitable for you.
+                    </p>
+                    <p>
+                        Create a documentation of some technical concepts with your words and code to share it with others
+                        with Pasteful!
+                    </p>
                 </div>
             </nav>
             <hr>
@@ -166,7 +212,7 @@
             <div class="section-content">
                 <div class="title">Expertise</div>
                 <p class="description">
-                    With over 11 years of industry experience in software development and management—Riverpath can deliver. 
+                    With over 11 years of industry experience in software development and management—Riverprograms can deliver. 
                     We provide solutions for building versatile web applications and our core is understanding the nuances of 
                     every detail in whatever we do.
                 </p>
