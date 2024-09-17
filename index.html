@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/static/img/riverprogram.png" />
-    <title>River.sh</title>
-
+    <link rel="icon" type="image/png" href="/static/img/favicon.png" />
+    <title>Riverprog</title>
     <style>
         @font-face {
             font-family: "Inter";
-            src: url("/static/font/InterDisplay-Medium.woff2") format("woff2");
+            src: url("/static/font/InterVariable.woff2") format("woff2");
         }
 
-        @font-face {
-            font-family: "Inter Bold";
-            src: url("/static/font/InterDisplay-Bold.woff2") format("woff2");
+        :root {
+            --main-color: cornflowerblue;
+            --logo-color: #1a5dd5;
+            --text-color: #333;
         }
         
         * {
@@ -30,207 +30,103 @@
 
         body {
             font-family: 'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: 22px;
-            color: #4b3f62;
-            background-color: #e3e8ed;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-color);
+            width: 600px;
+            padding: 2em;
+            border-right: 5px solid var(--main-color);
         }
 
         a {
-            color: #15C;
-            text-decoration: none;
-        }
-
-        main.content {
-            max-width: 1154px;
-            margin: 0 auto;
+            color: var(--logo-color);
+            font-weight: 500;
         }
 
         .header {
-            font-size: 48px;
-            margin: 20px auto 40px;
-            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .header .logo {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5em;
-        }
-
-        .header .logo a {
-            font-size: 32px;
-            color: #4b3f62;
-        }
-
-        .header .tagline {
-            font-family: 'Inter Bold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: 76px;
-            color: transparent;
-            text-overflow: ellipsis;
-            background-image: linear-gradient(326deg, #c75050 24.53%, #8582d7 75.37%);
-            background-clip: text;
-            letter-spacing: 0.01em;
-        }
-
-        .header .description {
-            font-size: 48px;
-        }
-
-        .section {
+            font-size: 20px;
+            color: var(--logo-color);
+            font-weight: 700;
+            text-decoration: none;
             display: flex;
             align-items: center;
-            margin: 4em 0;
         }
 
-        .section-content {
-            width: 50%;
+        .header .logo img {
+            margin-right: 0.3em;
         }
 
-        .section:nth-of-type(even) {
-            display: flex;
-            flex-direction: row-reverse;
+        .banner {
+            border-top: 2px solid var(--text-color);
+            border-bottom: 2px solid var(--text-color);
+            margin: 2em 0;
         }
 
-        .section img {
-            margin: 0 auto;
-        }
-
-        .projects .title,
-        .section .section-content .title {
-            font-family: 'Inter Bold', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: 30px;
-        }
-
-        .projects .title {
+        .banner h3 {
+            font-weight: 700;
             text-align: center;
-            margin: 1.5em 0;
+            margin: 0.5em 0;
         }
 
-        .projects {
-            margin: 4em 0 5em;
+        .section .title {
+            font-weight: 700;
+            margin: 2em 0 1em;
+            border-bottom: 2px solid var(--text-color);
+            padding-bottom: 0.2em;
         }
 
-        .projects nav {
-            padding: 2em 0 3em;
-            display: flex;
-            justify-content: space-between;
+        .section .section-content-sub {
+            margin-bottom: 2em;
         }
 
-        .projects nav a {
+        .section .section-content-sub a {
             position: relative;
-            text-decoration: underline;
+            font-size: 20px;
         }
 
-        .projects nav a::after {
+        .section .section-content-sub a::after {
             position: absolute;
-            width: 18px;
-            height: 18px;
-            content: "";
             background-image: url("/static/img/external-link.svg");
             background-size: cover;
+            content: "";
+            width: 15px;
+            height: 15px;
             margin-top: 5px;
-            margin-left: 7px;
-        }
-
-        .projects nav div {
-            width: 42%;
+            margin-left: 3px;
         }
 
         .footer {
-            margin: 2em 0 3em;
-            font-size: 18px;
-            border-top: 1px solid #4b3f62;
-            padding-top: 1em;
-            clear: both;
-        }
-
-        @media only screen and (max-width: 1260px) {
-            main.content {
-                max-width: 100%;
-                padding: 1em 2em;
-            }
-        }
-
-        @media only screen and (max-width: 560px) {
-            .header .logo {
-                flex-direction: column;
-                margin-bottom: 1em;
-            }
-
-            .header .logo a:first-child {
-                margin-bottom: 1em;
-            }
-
-            .header .tagline {
-                font-size: 38px;
-                margin-bottom: 1em;
-            }
-
-            .header .description {
-                font-size: 22px;
-            }
-
-            .projects nav {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .projects nav div {
-                width: 100%;
-                margin-bottom: 2em;
-            }
-
-            .section {
-                flex-direction: column;
-            }
-
-            .section .section-content {
-                width: 100%;
-                margin-bottom: 1em;
-            }
-
-            .section:nth-of-type(even) {
-                flex-direction: column;
-            }
+            border-top: 2px solid var(--text-color);
+            font-size: 13px;
+            padding-top: 0.5em;
+            margin-top: 2em;
         }
     </style>
-
 </head>
-
 <body>
-
     <a rel="me" href="https://mastodon.social/@tildezero" style="display:none;">Mastodon</a>
+    <header class="header">
+        <a class="logo" href="/"><img src="/static/img/logo.svg" alt="Logo of Riverprog" height="28px">Riverprog</a>
+        <a href="https://github.com/riverprog">
+            <img src="/static/img/github-mark.svg" height="28px"/>
+        </a>
+    </header>
+    <section class="banner">
+        <h3>Clarity. Consistency. Excellence.</h3>
+    </section>
 
     <main class="content">
-
-        <header class="header">
-            
-            <div class="logo">
-                <a href="/">River.sh</a>
-                <a href="https://github.com/riverprog">
-                    <img src="/static/img/github-mark.svg" height="32px"/>
-                </a>
-            </div>
-            
-            <div class="tagline">
-                Clarity. Consistency. Excellence.
-            </div>
-
-            <div class="description">
-                A web application development boutique, delivering with the mission of Clarity, Consistency and
-                Excellence in it's work.
-            </div>
-
-        </header>
-
-        <div class="projects">
-            <hr>
-            <div class="title">Our work</div>
-            <nav>
-                <div>
-                    <a href="https://emptyfm.river.sh" target="_blank">EmptyFM</a>
+        <section class="section">
+            <div class="section-content">
+                <h3 class="title">Our Work</h3>
+                <div class="section-content-sub">
+                    <a href="https://emptyfm.river.sh">EmptyFM</a>
                     <p>
                         There is an obvious chance that we might not get radio signals on our home that puts us in a turmoil
                         where we cannot be able to listen to our favorite FM radio stations. What if there is a browser app
@@ -241,8 +137,8 @@
                         This is where EmptyFM comes into play. You can listen to FM stations from all over the world.
                     </p>
                 </div>
-                <div>
-                    <a href="https://pasteful.org/" target="_blank">Pasteful</a>
+                <div class="section-content-sub">
+                    <a href="https://pasteful.org">Pasteful</a>
                     <p>
                         Pasteful is a tastefully looking code-snippets storing and sharing platform. If you want a single-page 
                         code snippets creation or something that you want to write as a single-page documentation to share it 
@@ -253,37 +149,34 @@
                         with Pasteful!
                     </p>
                 </div>
-            </nav>
-            <hr>
-        </div>
-
-        <section class="section">
-            <div class="section-content">
-                <div class="title">Expertise</div>
-                <p class="description">
-                    With over 11 years of industry experience in software development and management—River.sh can deliver. 
-                    We provide solutions for building versatile web applications and our core is understanding the nuances of 
-                    every detail in whatever we do.
-                </p>
             </div>
-            <img src="/static/img/expertise.svg" />
         </section>
 
         <section class="section">
             <div class="section-content">
-                <div class="title">Our DNA</div>
+                <h3 class="title">Expertise</h3>
+                <p class="description">
+                    With over 11 years of industry experience in software development and management—Riverprog can deliver. 
+                    We provide solutions for building versatile web applications and our core is understanding the nuances of 
+                    every detail in whatever we do.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-content">
+                <h3 class="title">Our DNA</h3>
                 <p class="description">
                     Our source of truth is that a software must be open by design and has a transparent team in making decisions. 
                     This is what we do with our existing products. We nurture each and every step of the process to a great care 
                     and believe that the effort that we put in is worth a satisfaction of our daily life.
                 </p>
             </div>
-            <img src="/static/img/dna.svg" />
         </section>
 
         <section class="section">
             <div class="section-content">
-                <div class="title">Get in touch</div>
+                <h3 class="title">Get in touch</h3>
                 <p class="description">
                     If you have any queries, do not hesitate and feel free to get in touch.
                 </p>
@@ -291,7 +184,6 @@
                     <a href="mailto:tildezero@gmail.com">tildezero@gmail.com</a>
                 </p>
             </div>
-            <img src="/static/img/contact.svg" />
         </section>
 
         <footer class="footer">
